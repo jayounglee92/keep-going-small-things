@@ -8,7 +8,6 @@
 ## Description
 - Skill : HTML, CSS, Javascript
 - Tool : VSCode
-- URL : https://jayounglee92.github.io/keep-going-small-things/
 
 ## Contents
 - [x] todoList : https://jayounglee92.github.io/keep-going-small-things/todoList  
