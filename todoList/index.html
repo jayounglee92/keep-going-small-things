@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todoList</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
+<body>
+  <div id="container">
+    <div class="todoList">
+
+      <h2>NEW TASK</h2>
+
+      <p class="input_area">
+        <input id="input_list" type="text" placeholder="add task"/>
+        <button id="add-btn" onclick="addToDoList();">ADD</button>
+      </p>
+
+      <dl id="todo-list">
+        <dt>TASKS LEFT</dt>
+      </dl>
+
+      <dl id="done-list">
+        <dt>TASKS COMPLETED</dt>
+      </dl>
+
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

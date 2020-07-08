@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style:none;}
+        .wrap{overflow:hidden; padding-bottom:100px;}
+        .container{width:400px; height:600px; margin:50px auto 0;
+            overflow:hidden; box-shadow:3px 3px 16px #ccc;}
+        .header{width:400px; height:260px; overflow:hidden;}
+        .circle{background-color:lightskyblue; width:200px; height:200px;
+            margin:50px auto 0; border:3px solid midnightblue; border-radius:100px; overflow:hidden;}
+        .head{width:100px; height:110px; background-color:white; margin:-200px auto 0;
+            border-radius:40px; border:2px solid midnightblue; border-bottom:none;
+            position:relative;}
+        .face{width:60px; height:70px; background-color:lightblue;
+            margin:30px auto 0; border-radius:60px; position:relative; overflow:hidden;}
+        .head:after{
+            background:
+                    linear-gradient(-45deg, transparent 16px, midnightblue 0),
+                    linear-gradient(45deg, transparent 16px, midnightblue  0);
+            background-repeat: repeat-x;
+            background-position: left bottom;
+            background-size: 22px 18px;
+            content: "";
+            display: block;
+
+            width: 100%;
+            height: 32px;
+
+            position: relative;
+            top:-89px;
+            left:0px;
+            z-index:1;
+
+        }
+        .eyes{width:10px; height:10px; background-color:midnightblue;
+            border-radius:5px; position:absolute;}
+        .left-eye{left:12px; top:24px;}
+        .right-eye{right:12px; top:24px;}
+        .in-eyes{display:block; width:3px; height:3px; background-color:white;
+            border-radius:1.5px; margin:2px 0 0 1px;
+            animation:eyes-default-moving 4s alternate infinite;}
+        .nose{width:0; height:0; margin:37px auto;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-top: 3px solid midnightblue; border-radius:3px;}
+        .mouth{width:30px; height:30px; border-bottom:5px solid midnightblue;
+            border-radius:15px; margin:-58px auto 0;
+            animation:mouth-default-moving 6s alternate infinite;}
+        .ears{width:15px; height:24px; border:2px solid midnightblue;
+            border-radius:15px; position:absolute; background-color:white;}
+        .left-ear{left:-14px; top:44px; border-right:none;}
+        .left-ear .in-ear{border-right:none;}
+        .right-ear{right:-14px; top:44px; border-left:none;}
+        .right-ear .in-ear{border-left:none;}
+        .in-ear{display:block; width:8px; height:10px; border:2px solid midnightblue;
+            border-radius:7px; background-color:white; margin:5px 0 0 2px;}
+
+        .body{width:180px; height:100px; background-color:white; margin:140px auto 0;
+            border-radius:40px; border:2px solid midnightblue;
+            animation:body-default-moving 5s alternate infinite;}
+        .stomach{width:80px; height:90px; background-color:lightblue;
+            margin:20px auto 0; border-radius:40px;
+            animation:stomach-default-moving 5s alternate infinite;}
+
+        form ul li{width:300px; margin:0 auto; margin-top:20px;}
+        form div{width:300px; margin:0 auto; margin-top:20px;}
+        label{color:cornflowerblue; display:block; padding-bottom:10px; font-weight:bold;}
+        input{width:100%; height:40px; border:2px solid cornflowerblue;
+            border-radius:5px; background-color:rgba(0,100,255,0.1); text-indent:10px;
+        font-size:17px; font-weight: bold; color:#888;}
+        input::-webkit-input-placeholder {color:rgba(0,0,0,0.2); }
+        input[type=submit]{border:none; width:100%; height:46px;
+            background-color:lightskyblue; color:#fff; font-weight:bold; font-size:18px;}
+
+        @keyframes eyes-default-moving {
+            0% {margin:2px 0 0 1px;}
+
+            100% {margin:2px 0 0 6px;}
+        }
+
+        @keyframes mouth-default-moving {
+            0% {transform:rotate(0); transform:scale(1);}
+            50%{transform:rotate(-10deg); height:32px;}
+            100% {transform:rotate(10deg); transform:scale(1.05);}
+        }
+
+        @keyframes body-default-moving {
+            0% {transform:rotate(0); transform:scale(1);}
+            50%{transform:rotate(-10deg); transform:scale(0.97);}
+            100% {transform:rotate(10deg); transform:scale(1.03);}
+        }
+
+        @keyframes stomach-default-moving {
+            0% {transform:scale(1);}
+            100% {transform:scale(1.04);}
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="header">
+            <div class="circle">
+                <div class="body">
+                    <div class="stomach">
+
+                    </div>
+                </div>
+                <div class="head">
+                    <div class="face">
+                        <div class="hair"></div>
+                        <div class="eyes left-eye">
+                            <p class="in-eyes"></p>
+                        </div>
+                        <div class="eyes right-eye">
+                            <p class="in-eyes"></p>
+                        </div>
+                        <div class="nose"></div>
+                        <div class="mouth"></div>
+                    </div>
+                    <div class="ears left-ear">
+                        <p class="in-ear"></p>
+                    </div>
+                    <div class="ears right-ear">
+                        <p class="in-ear"></p>
+                    </div>
+                </div>
+                <div class="arms left-arm"></div>
+                <div class="arms right-arm"></div>
+            </div>
+        </div>
+        <div class="login">
+            <form>
+                <ul>
+                    <li>
+                        <label>Email</label>
+                        <input type="email" autofocus required placeholder="email@domain.com"/>
+                    </li>
+                    <li>
+                        <label>Password</label>
+                        <input type="password" required minlength="6" maxlength="10" title="password must be 6 to 10"/>
+                    </li>
+                </ul>
+                <div>
+                    <input type="submit" value="Log in"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
