@@ -6,12 +6,11 @@
 
 
 ## Description
-- Skill : HTML, CSS, Javascript
+- Skill : HTML, CSS, Javascript(Vanilla)
 - Tool : VSCode
 
 ## Contents
-- [x] todoList : https://jayounglee92.github.io/keep-going-small-things/todoList  
-inspired from https://codepen.io/search/pens?q=todolist  
-
-- [x] login : https://jayounglee92.github.io/keep-going-small-things/login  
-inspired from https://dribbble.com/shots/4758103-Yeti-Login-Form-v2
+|  #  |            Project             | Live Demo | Reference |
+| :-: | :----------------------------: | :-------: | :-------: |
+| 01  |       [Login Form](https://github.com/jayounglee92/keep-going-small-things/tree/master/login)       | [Live Demo](https://jayounglee92.github.io/keep-going-small-things/todoList )  | [Link](https://codepen.io/search/pens?q=todolist) |
+| 02  |     [To do List](https://github.com/jayounglee92/keep-going-small-things/tree/master/todoList)    | [Live Demo](https://jayounglee92.github.io/keep-going-small-things/todoList)  | [Link](https://dribbble.com/shots/4758103-Yeti-Login-Form-v2) |
